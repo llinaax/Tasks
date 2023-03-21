@@ -8,6 +8,7 @@ namespace Task1
         {
             Aplication aplication = new Aplication();
             aplication.Starting();
+            aplication.Asking();
         }
     }
 }

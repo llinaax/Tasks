@@ -10,11 +10,11 @@ public class Menu
     
     public Menu CreateDish()
     {
-        Console.WriteLine("Enter table Number");
+        Console.WriteLine("Enter tha name of the dish:");
         var dish = Console.ReadLine();
-        Console.WriteLine("Enter table Seats");
+        Console.WriteLine("Enter the price of the dish:");
         var price = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter table Number");
+        Console.WriteLine("Enter the ingredients:");
         var inredients = Console.ReadLine();
 
         return new Menu()
