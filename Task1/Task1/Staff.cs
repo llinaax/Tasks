@@ -2,21 +2,20 @@
 
 public class Staff
 {
+    public string Name { get; set; }
     public int Number { get; set; }
-        
-    public int Seats { get; set; }
-
-    public Table CreateTable()
+    
+    public Staff CreateEmployee()
     {
-        Console.WriteLine("Enter table Number");
+        Console.WriteLine("Enter employee's name:");
+        var name = Console.ReadLine();
+        Console.WriteLine("Enter employee's number:");
         var number = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter table Seats");
-        var seats = Convert.ToInt32(Console.ReadLine());
 
-        return new Table
+        return new Staff
         {
-            Number = number,
-            Seats = seats
+            Name = name,
+            Number = number
         };
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Task1;
+﻿using System.Xml;
+
+namespace Task1;
 
 public class Aplication
 {

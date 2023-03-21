@@ -2,21 +2,20 @@
 
 public class Inredients
 {
-    public int Number { get; set; }
-        
-    public int Seats { get; set; }
-
-    public Table CreateTable()
+    public string Name { get; set; }
+    public int Price { get; set; }
+    
+    public Inredients CreateIngredients()
     {
-        Console.WriteLine("Enter table Number");
-        var number = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter table Seats");
-        var seats = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please enter the name of ingredient:");
+        var name = Console.ReadLine();
+        Console.WriteLine("Please enter a price of ingredient:");
+        var price = Convert.ToInt32(Console.ReadLine());
 
-        return new Table
+        return new Inredients()
         {
-            Number = number,
-            Seats = seats
+            Name = name,
+            Price = price
         };
     }
 }

@@ -1,22 +1,20 @@
 ﻿namespace Task1;
 
-public class Orders
+internal class Orders
 {
-    public int Number { get; set; }
-        
-    public int Seats { get; set; }
-
-    public Table CreateTable()
+    public string? Dishes { get; set; }
+    public int Prices { get; set; }
+    public Orders CreateNewOrder()
     {
-        Console.WriteLine("Enter table Number");
-        var number = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter table Seats");
-        var seats = Convert.ToInt32(Console.ReadLine());
-
-        return new Table
+        Console.WriteLine("Enter the name of the dish:");
+        var d = Console.ReadLine();
+        Console.WriteLine("Enter the price of the dish:");
+        var p = Convert.ToInt32(Console.ReadLine());
+        return new Orders()
         {
-            Number = number,
-            Seats = seats
+            Dishes = d,
+            Prices = p
         };
     }
+        
 }

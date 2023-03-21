@@ -2,21 +2,20 @@
 
 public class Visitors
 {
+    public string Name { get; set; }
     public int Number { get; set; }
-        
-    public int Seats { get; set; }
-
-    public Table CreateTable()
+    
+    public Visitors CreateVisitor()
     {
-        Console.WriteLine("Enter table Number");
+        Console.WriteLine("Enter your name:");
+        var name = Console.ReadLine();
+        Console.WriteLine("Enter your number:");
         var number = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter table Seats");
-        var seats = Convert.ToInt32(Console.ReadLine());
 
-        return new Table
+        return new Visitors
         {
-            Number = number,
-            Seats = seats
+            Name = name,
+            Number = number
         };
     }
 }
