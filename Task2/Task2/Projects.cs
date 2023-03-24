@@ -10,8 +10,6 @@ namespace Task2
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public string StartTermsDay { get; set; }
-        public string EndTermsDay { get; set; }
         public int Budget { get; set; }
 
         public Projects CreateProject()
@@ -20,11 +18,7 @@ namespace Task2
             var name = Console.ReadLine();
             Console.WriteLine("Enter the description of project:");
             var description = Console.ReadLine();
-            Console.WriteLine("Enter project design start:");
-            string startTermsDay = Console.ReadLine();
-            Console.WriteLine("Enter the end of project design:");
-            string endTermsDay = Console.ReadLine();
-            Console.WriteLine("Enter the budget of project:");
+            Console.WriteLine("Enter the budget of project(dollars):");
             int budget = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("__________________");
 
@@ -32,8 +26,6 @@ namespace Task2
             {
                 Name = name,
                 Description = description,
-                StartTermsDay = startTermsDay,
-                EndTermsDay = endTermsDay,
                 Budget = budget
             };
         }

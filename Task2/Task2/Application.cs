@@ -14,7 +14,7 @@ namespace Task2
             "1.Create a new project: '1'",
             "2.Adding tasks: '2'",
             "3.Edit project: '3'",
-            "4.Team Management: '4'"
+            "4.Team Management: '4'\n"
         };
 
         public void PrintActions()
@@ -28,6 +28,8 @@ namespace Task2
         public void ChooseAnAction()
         {
             ProjectManagement projectManagement = new ProjectManagement();
+            BeginTerms beginTerms = new BeginTerms();
+            EndTerms ensTerms = new EndTerms();
             var i = true;
             while (i)
             {
@@ -38,7 +40,15 @@ namespace Task2
                 {
                     case 1:
                         projectManagement.AddNewProject();
+                        projectManagement.AddBeginTerm();
+                        projectManagement.AddEndTerm();
                         projectManagement.PrintProject();
+                        projectManagement.PrintBeginTerm();
+                        projectManagement.PrintEndTerm();
+                        break;
+                    case 2:
+                        projectManagement.AddNewTask();
+                        projectManagement.PrintTasks();
                         break;
                     case 5:
                         i = false;
