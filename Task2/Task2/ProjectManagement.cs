@@ -33,17 +33,7 @@ namespace Task2
         public void AddBeginTerm()
         {
             BeginTerms terms = new BeginTerms();
-            if (terms.Day > 0 && terms.Day <= 31)
-            {
-                _terms.Add(terms.CreateDataStart());
-            }
-            else
-            {
-                Console.WriteLine("Enter again:");
-                _terms.Add(terms.CreateDataStart());
-            }
-            
-            
+            _terms.Add(terms.CreateDataStart());
         }
 
         public void AddEndTerm()
@@ -84,11 +74,18 @@ namespace Task2
         {
             foreach (var t in _tasks)
             {
-                Console.WriteLine("Your added task:");
+                Console.WriteLine("Your added tasks:");
                 Console.WriteLine($"Name: {t.Name}");
                 Console.WriteLine($"Assignment: {t.Assignment}");
             }
         }
+
+        public void ChooseTask()
+        {
+            Console.WriteLine("Choose task from list(Press the number of chosen task):");
+            var task = Convert.ToInt32(Console.ReadLine());
+        }
+        
     }
 
 }
