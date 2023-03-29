@@ -3,14 +3,17 @@
 public class Ingredients
 {
     public string Name { get; set; }
-    public int Price { get; set; }
+
+    public bool Price { get; set; }
     
-    public Ingredients CreateIngredients()
+
+    public static Ingredients CreateIngredients()
     {
+        int num;
         Console.WriteLine("Please enter the name of ingredient:");
         var name = Console.ReadLine();
         Console.WriteLine("Please enter a price of ingredient:");
-        var price = Convert.ToInt32(Console.ReadLine());
+        bool price = int.TryParse(Console.ReadLine(), out num);
 
         return new Ingredients()
         {

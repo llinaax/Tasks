@@ -3,14 +3,17 @@
 public class Staff
 {
     public string Name { get; set; }
-    public int Number { get; set; }
-    
+
+    public bool Number { get; set; }
+
+
     public Staff CreateEmployee()
     {
+        int num;
         Console.WriteLine("Enter employee's name:");
         var name = Console.ReadLine();
         Console.WriteLine("Enter employee's number:");
-        var number = Convert.ToInt32(Console.ReadLine());
+        var number = int.TryParse(Console.ReadLine(), out num);
 
         return new Staff
         {

@@ -2,7 +2,19 @@
 
 public class RestaurantManagment
 {
-     List<string> Instructions = new List<string>()
+    List<Menu> Menus = new List<Menu>();
+
+    List<Ingredients> Ingredients = new List<Ingredients>();
+
+    List<Orders> Orders = new List<Orders>();
+
+    List<Staff> Staff = new List<Staff>();
+
+    List<Table> Tables = new List<Table>();
+
+    List<Visitors> Visitors = new List<Visitors>();
+
+    List<string> Instructions = new List<string>()
         {
             "1.For adding a new dish press '1'",
             "2.For adding new ingredient press '2'",
@@ -27,7 +39,6 @@ public class RestaurantManagment
             }
 
         }
-        List<Menu> Menus = new List<Menu>();
 
         public void PrintMenu()
         {
@@ -44,7 +55,7 @@ public class RestaurantManagment
             Menu menu = new Menu();
             Menus.Add(menu.CreateDish());
         }
-        List<Ingredients> Ingredients = new List<Ingredients>();
+        
         public void PrintIngredients()
         {
             foreach (var n in Ingredients)
@@ -54,12 +65,12 @@ public class RestaurantManagment
             }
         }
 
-        public void AddNewIngredient()
+        public static void AddNewIngredient()
         {
             Ingredients ingredients = new Ingredients();
             Ingredients.Add(ingredients.CreateIngredients());
         }
-        List<Orders> Orders = new List<Orders>();
+        
 
         public void AddNewOrder()
         {
@@ -76,8 +87,6 @@ public class RestaurantManagment
             }
         }
 
-        List<Staff> Staff = new List<Staff>();
-
         public void AddNewEmployee()
         {
             Staff staff = new Staff();
@@ -92,8 +101,6 @@ public class RestaurantManagment
                 Console.WriteLine($"Employee's number: {s.Number}");
             }
         }
-
-        List<Table> Tables = new List<Table>();
 
         public void AddNewTable()
         {
@@ -110,9 +117,7 @@ public class RestaurantManagment
             }
         }
 
-         List<Visitors> Visitors = new List<Visitors>();
-
-         public void AddNewVisitor()
+        public void AddNewVisitor()
          {
              Visitors visitors = new Visitors();
              Visitors.Add(visitors.CreateVisitor());
