@@ -2,24 +2,22 @@
 
 public class Table
 {
-    public bool Number { get; set; }
-   
-
-    public bool Seats { get; set; }
-    
+    public int Number { get; set; }
+    public int Seats { get; set; }
 
     public Table CreateTable()
     {
-        int num;
         Console.WriteLine("Enter table Number");
-        var number = int.TryParse(Console.ReadLine(), out num);
+        string num = Console.ReadLine();
+        bool number = int.TryParse(num, out int n);
         Console.WriteLine("Enter table Seats");
-        var seats = int.TryParse(Console.ReadLine(), out num);
+        string seat = Console.ReadLine();
+        bool seats = int.TryParse(seat, out int s);
 
         return new Table
         {
-            Number = number,
-            Seats = seats
+            Number = n,
+            Seats = s
         };
     }
 }

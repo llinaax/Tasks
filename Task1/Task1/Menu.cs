@@ -4,7 +4,7 @@ public class Menu
 {
     public string Dish { get; set; }
         
-    public string Price { get; set; }
+    public int Price { get; set; }
     
     public string Inredients { get; set; }
 
@@ -17,14 +17,14 @@ public class Menu
         var dish = Console.ReadLine();
         Console.WriteLine("Enter the price of the dish:");
         string price = Console.ReadLine();
-        bool p = Int32.TryParse(price, out int i);
+        bool p = int.TryParse(price, out int i);
         Console.WriteLine("Enter the ingredients:");
         var inredients = Console.ReadLine();
 
         return new Menu()
         {
             Dish = dish,
-            Price  = price,
+            Price  = i,
             Inredients = inredients
         };
     }
