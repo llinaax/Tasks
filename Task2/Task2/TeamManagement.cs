@@ -19,9 +19,6 @@ namespace Task2
             Console.WriteLine("Enter the position of employee:");
             var position = Console.ReadLine();
             
-            
-            
-
             return new TeamManagement()
             {
                 Name = name,
