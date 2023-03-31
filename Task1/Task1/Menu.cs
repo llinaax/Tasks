@@ -8,9 +8,7 @@ public class Menu
     
     public string Inredients { get; set; }
 
-    
-
-    public Menu CreateDish()
+    public static Menu CreateDish()
     {
         
         Console.WriteLine("Enter tha name of the dish:");

@@ -2,18 +2,12 @@
 
 public class RestaurantManagment
 {
-    List<Menu> Menus = new List<Menu>();
-
-    List<Ingredients> Ingredients = new List<Ingredients>();
-
-    List<Orders> Orders = new List<Orders>();
-
-    List<Staff> Staff = new List<Staff>();
-
-    List<Table> Tables = new List<Table>();
-
-    List<Visitors> Visitors = new List<Visitors>();
-
+    List<Menu> menus = new List<Menu>();
+    List<Ingredients> ingredients = new List<Ingredients>();
+    List<Orders> orders = new List<Orders>();
+    List<Staff> staff = new List<Staff>();
+    List<Table> tables = new List<Table>();
+    List<Visitors> visitors = new List<Visitors>();
     List<string> Instructions = new List<string>()
         {
             "1.For adding a new dish press '1'",
@@ -42,7 +36,7 @@ public class RestaurantManagment
 
         public void PrintMenu()
         {
-            foreach (var m in Menus)
+            foreach (var m in menus)
             {
                 Console.WriteLine($"Name: {m.Dish}");
                 Console.WriteLine($"Price: {m.Price}");
@@ -52,35 +46,34 @@ public class RestaurantManagment
 
         public void AddNewDish()
         {
-            Menu menu = new Menu();
-            Menus.Add(menu.CreateDish());
+    
+            menus.Add(Menu.CreateDish());
         }
         
         public void PrintIngredients()
         {
-            foreach (var n in Ingredients)
+            foreach (var n in ingredients)
             {
                 Console.WriteLine($"Name: {n.Name}");
                 Console.WriteLine($"Price: {n.Price}\n");
             }
         }
 
-        public static void AddNewIngredient()
+        public void AddNewIngredient()
         {
-            Ingredients ingredients = new Ingredients();
-            Ingredients.Add(ingredients.CreateIngredients());
+            ingredients.Add(Ingredients.CreateIngredients());
         }
         
 
         public void AddNewOrder()
         {
-            Orders orders = new Orders();
-            Orders.Add(orders.CreateNewOrder());
+        
+            orders.Add(Orders.CreateNewOrder());
         }
 
         public void PrintNewOrder()
         {
-            foreach (var o in Orders)
+            foreach (var o in orders)
             {
                 Console.WriteLine($"Your dish: {o.Dishes}");
                 Console.WriteLine($"Your total price: {o.Prices}");
@@ -89,13 +82,13 @@ public class RestaurantManagment
 
         public void AddNewEmployee()
         {
-            Staff staff = new Staff();
-            Staff.Add(staff.CreateEmployee());
+    
+            staff.Add(Staff.CreateEmployee());
         }
 
         public void PrintNewEmployee()
         {
-            foreach (var s in Staff)
+            foreach (var s in staff)
             {
                 Console.WriteLine($"Employee's name: {s.Name}");
                 Console.WriteLine($"Employee's number: {s.Number}");
@@ -104,13 +97,12 @@ public class RestaurantManagment
 
         public void AddNewTable()
         {
-            Table tables = new Table();
-            Tables.Add(tables.CreateTable());
+            tables.Add(Table.CreateTable());
         }
 
         public void PrintNewTable()
         {
-            foreach (var t in Tables)
+            foreach (var t in tables)
             {
                 Console.WriteLine($"Table number: {t.Number}");
                 Console.WriteLine($"Table seats: {t.Seats}");
@@ -119,12 +111,11 @@ public class RestaurantManagment
 
         public void AddNewVisitor()
          {
-             Visitors visitors = new Visitors();
-             Visitors.Add(visitors.CreateVisitor());
+             visitors.Add(Visitors.CreateVisitor());
          }
          public void PrintNewVisitor()
          {
-             foreach (var v in Visitors)
+             foreach (var v in visitors)
              {
                  Console.WriteLine($"Visitor's name: {v.Name}");
                  Console.WriteLine($"Visitor's number: {v.Number}");

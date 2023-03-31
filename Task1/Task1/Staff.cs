@@ -7,12 +7,12 @@ public class Staff
     public int Number { get; set; }
 
 
-    public Staff CreateEmployee()
+    public static Staff CreateEmployee()
     {
         Console.WriteLine("Enter employee's name:");
         var name = Console.ReadLine();
         Console.WriteLine("Enter employee's number:");
-        srting number = Console.ReadLine()
+        string number = Console.ReadLine();
         bool numbers = int.TryParse(number, out int num);
 
         return new Staff

@@ -6,7 +6,7 @@ public class Visitors
     public bool Number { get; set; }
 
 
-    public Visitors CreateVisitor()
+    public static Visitors CreateVisitor()
     {
         int num;
         Console.WriteLine("Enter your name:");

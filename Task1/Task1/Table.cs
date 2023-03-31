@@ -5,7 +5,7 @@ public class Table
     public int Number { get; set; }
     public int Seats { get; set; }
 
-    public Table CreateTable()
+    public static Table CreateTable()
     {
         Console.WriteLine("Enter table Number");
         string num = Console.ReadLine();

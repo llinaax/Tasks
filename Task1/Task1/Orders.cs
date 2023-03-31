@@ -5,7 +5,7 @@ internal class Orders
     public string? Dishes { get; set; }
     public int Prices { get; set; }
     
-    public Orders CreateNewOrder()
+    public static Orders CreateNewOrder()
     {
         Console.WriteLine("Enter the name of the dish:");
         var d = Console.ReadLine();
