@@ -52,8 +52,6 @@ public class Aplication
 
                     break;
                 case 4:
-                    Staff staff = new Staff();
-
                     restaurantManagment.AddNewEmployee();
                     Console.WriteLine("_____");
                     Console.WriteLine("Employee");

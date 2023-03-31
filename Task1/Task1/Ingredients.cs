@@ -5,8 +5,11 @@ public class Ingredients
     public string Name { get; set; }
 
     public int Price { get; set; }
-    
 
+    private Ingredients()
+    {
+        
+    }
     public static Ingredients CreateIngredients()
     {
         Console.WriteLine("Please enter the name of ingredient:");

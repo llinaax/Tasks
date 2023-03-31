@@ -8,6 +8,10 @@ public class Menu
     
     public string Inredients { get; set; }
 
+    private Menu()
+    {
+        
+    }
     public static Menu CreateDish()
     {
         

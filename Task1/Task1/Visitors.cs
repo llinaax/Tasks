@@ -5,7 +5,10 @@ public class Visitors
     public string Name { get; set; }
     public bool Number { get; set; }
 
-
+    private Visitors()
+    {
+        
+    }
     public static Visitors CreateVisitor()
     {
         int num;

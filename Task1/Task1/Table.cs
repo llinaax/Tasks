@@ -5,6 +5,10 @@ public class Table
     public int Number { get; set; }
     public int Seats { get; set; }
 
+    private Table()
+    {
+        
+    }
     public static Table CreateTable()
     {
         Console.WriteLine("Enter table Number");

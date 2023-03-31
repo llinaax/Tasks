@@ -6,7 +6,10 @@ public class Staff
 
     public int Number { get; set; }
 
-
+    private Staff()
+    {
+        
+    }
     public static Staff CreateEmployee()
     {
         Console.WriteLine("Enter employee's name:");

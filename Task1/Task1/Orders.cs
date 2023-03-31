@@ -4,7 +4,11 @@ internal class Orders
 {
     public string? Dishes { get; set; }
     public int Prices { get; set; }
-    
+
+    private Orders()
+    {
+        
+    }
     public static Orders CreateNewOrder()
     {
         Console.WriteLine("Enter the name of the dish:");
